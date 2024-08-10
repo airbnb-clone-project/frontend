@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "pinterest-clone",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -37,7 +37,7 @@
     "eslint-config-prettier": "^9.1.0",
     "jsdom": "^24.1.1",
     "msw": "^2.3.5",
-    "postcss": "^8",
+    "postcss": "^8.4.41",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "vitest": "^2.0.5"
