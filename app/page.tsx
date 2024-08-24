@@ -1,5 +1,6 @@
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Icon } from '@/components/common/icon';
 import {
   Popover,
   PopoverContent,
@@ -9,6 +10,7 @@ import { cn } from '@/lib/utils';
 import Plus from '@/public/svgs/plus.svg';
 import Pen from '@/public/svgs/pen.svg';
 import Danger from '@/public/svgs/danger.svg';
+
 
 const Home = () => {
   return (
@@ -28,6 +30,8 @@ const Home = () => {
           </Popover>
         </div>
         <div>
+          <Icon icon="template" accessibilityLabel="Add item" color="disabled" />
+          asdfafds
           <Plus width="100" height="100" />
           <Pen width="100" height="100" />
           <Danger width="100" height="100" />잘 적용됩니다
