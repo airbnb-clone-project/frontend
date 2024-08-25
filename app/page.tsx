@@ -11,6 +11,7 @@ import Plus from '@/public/svgs/plus.svg';
 import Pen from '@/public/svgs/pen.svg';
 import Danger from '@/public/svgs/danger.svg';
 import AppIconBtn from '@/components/common/AppIconBtn';
+import AppAvatar from '@/components/common/AppAvatar';
 
 const Home = () => {
   return (
@@ -45,6 +46,11 @@ const Home = () => {
           <AppIconBtn />
           <AppIconBtn textColor="primary" size="md" />
           <AppIconBtn textColor="primary" size="sm" />
+        </div>
+        <div>
+          <AppAvatar src="/vercel.svg" alt="d" />
+          <AppAvatar src="/vercel.svg" alt="d" size="lg" />
+          <AppAvatar size="sm" />
         </div>
       </section>
     </div>
