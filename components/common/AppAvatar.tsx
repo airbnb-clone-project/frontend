@@ -7,14 +7,16 @@ interface AppAvatarProps {
   alt?: string;
   size?: 'lg' | 'md' | 'sm';
   children?: React.ReactNode;
+  hoverEffect?: boolean;
 }
 
-const basicStyle =
-  'rounded-full overflow-hidden flex justify-center items-center';
+const baseStyle =
+  'rounded-full overflow-hidden flex justify-center items-center cursor-pointer';
 
+const hoverStyle = 'hover:bg-[#d1d1d1]';
 const normalStyle = 'bg-[#e9e9e9]';
 
-const sizeClasses = {
+const sizeOptions = {
   lg: 'w-[120px] h-[120px]',
   md: 'w-16 h-16',
   sm: 'w-12 h-12',
@@ -25,9 +27,13 @@ const AppAvatar = ({
   alt = 'Avatar',
   size = 'md',
   children,
+  hoverEffect = false,
 }: AppAvatarProps) => {
-  const ImageClasses = cn(basicStyle, sizeClasses[size]);
-  const NormalClasses = cn(basicStyle, sizeClasses[size], normalStyle);
+  const hoverClass = hoverEffect ? hoverStyle : '';
+
+  const classes = cn(baseStyle, sizeOptions[size], hoverClass, {
+    [normalStyle]: !src,
+  });
 
   const dimensions =
     size === 'lg'
@@ -37,7 +43,7 @@ const AppAvatar = ({
         : { width: 48, height: 48 };
 
   return (
-    <div className={src ? ImageClasses : NormalClasses}>
+    <div className={classes}>
       {src ? (
         <Image
           src={src}

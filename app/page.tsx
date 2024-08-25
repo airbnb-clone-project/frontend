@@ -50,7 +50,7 @@ const Home = () => {
         <div>
           <AppAvatar src="/vercel.svg" alt="d" />
           <AppAvatar src="/vercel.svg" alt="d" size="lg" />
-          <AppAvatar size="sm" />
+          <AppAvatar size="sm" hoverEffect={true} />
         </div>
       </section>
     </div>
