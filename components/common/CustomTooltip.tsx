@@ -1,10 +1,9 @@
-import React from 'react';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from '@/components/ui/tooltip';
 
 interface CustomTooltipProps {
   content: React.ReactNode;
@@ -22,11 +21,9 @@ const CustomTooltip = ({
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger asChild>
-          {children}
-        </TooltipTrigger>
-        <TooltipContent 
-          className={`bg-gray-800 text-white rounded-lg p-2 m-1`} 
+        <TooltipTrigger asChild>{children}</TooltipTrigger>
+        <TooltipContent
+          className={`bg-gray-800 text-white rounded-lg p-2 m-1`}
           side={position}
         >
           {content}

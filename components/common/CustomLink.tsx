@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
@@ -18,9 +17,9 @@ const CustomLink = ({
   type = 'inline-reg',
   darkBackground = false,
   newTab = true,
-}: CustomLinkProps) => {  
+}: CustomLinkProps) => {
   const sizeClasses = size === 'xs' ? 'text-xs' : 'text-md';
-  
+
   const typeClasses = {
     'inline-sb': 'font-semibold underline',
     'inline-reg': 'font-normal underline',
@@ -29,14 +28,15 @@ const CustomLink = ({
 
   const colorClasses = darkBackground ? 'text-white' : 'text-gray-800';
 
-  const classes = cn(
-    sizeClasses,
-    typeClasses,
-    colorClasses
-  );
+  const classes = cn(sizeClasses, typeClasses, colorClasses);
 
   return (
-    <Link href={href} className={classes} target={newTab ? '_blank' : '_self'} rel={newTab ? 'noopener noreferrer' : undefined}>
+    <Link
+      href={href}
+      className={classes}
+      target={newTab ? '_blank' : '_self'}
+      rel={newTab ? 'noopener noreferrer' : undefined}
+    >
       {children}
     </Link>
   );
