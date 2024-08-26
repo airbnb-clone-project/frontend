@@ -33,14 +33,14 @@ const Checkbox = ({
   };
 
   return (
-    <div className="flex items-center">
+    <div className={clsx('group flex items-center')}>
       <ShadcnCheckbox.Root
         id={id}
         checked={checked}
         disabled={disabled}
         onCheckedChange={onChange}
         className={clsx(
-          'flex justify-center items-center group size-4 border-2 data-[state=checked]:bg-black disabled:bg-button-secondary-hover disabled:border-button-secondary-hover',
+          'peer flex justify-center items-center size-4 border-2 data-[state=checked]:bg-black disabled:bg-button-secondary-hover disabled:border-button-secondary-hover',
           {
             'size-4 rounded': size === 'sm',
             'size-6 rounded-md': size === 'md',
@@ -63,7 +63,10 @@ const Checkbox = ({
       </ShadcnCheckbox.Root>
 
       {label && (
-        <Label htmlFor={id} className="text-base ml-2 font-normal cursor-pointer">
+        <Label
+          htmlFor={id}
+          className="text-base ml-2 font-normal cursor-pointer peer-disabled:pointer-events-none peer-disabled:text-checkbox"
+        >
           {label}
         </Label>
       )}
