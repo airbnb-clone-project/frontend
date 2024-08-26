@@ -43,6 +43,12 @@ const config = {
             },
           },
         },
+        checkbox: {
+          DEFAULT: '#767676',
+          hover: '#A5A5A5',
+          error: '#CC0000',
+          disabled: '#E9E9E9',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
