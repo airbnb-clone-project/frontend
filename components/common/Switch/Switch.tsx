@@ -10,14 +10,14 @@ interface SwitchProps {
 }
 
 const Switch = ({ initialSwitched, disabled, onSwitch }: SwitchProps) => {
-  const [switched, setSwitched] = useState(initialSwitched ?? false);
+  const [switched, setSwitched] = useState(initialSwitched);
   const onCheckedChange = (checked: boolean) => {
     setSwitched(checked);
     onSwitch?.(checked);
   };
 
   useEffect(() => {
-    setSwitched(initialSwitched ?? false);
+    setSwitched(initialSwitched);
   },[initialSwitched]);
 
   return (

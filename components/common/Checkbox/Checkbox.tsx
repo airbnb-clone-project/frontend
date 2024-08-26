@@ -1,7 +1,7 @@
 'use client';
 
 import * as ShadcnCheckbox from '@radix-ui/react-checkbox';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CheckIcon from '@/public/svgs/checkbox.svg';
 import DashIcon from '@/public/svgs/dash-com.svg';
 import clsx from 'clsx';
@@ -31,6 +31,10 @@ const Checkbox = ({
     setChecked(checked as boolean);
     onChangehandler?.(checked as boolean);
   };
+
+  useEffect(() => {
+    setChecked(initialChecked);
+  }, [initialChecked]);
 
   return (
     <div className={clsx('group flex items-center')}>
