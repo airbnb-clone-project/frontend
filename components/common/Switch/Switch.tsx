@@ -18,7 +18,7 @@ const Switch = ({ initialSwitched, disabled, onSwitch }: SwitchProps) => {
 
   useEffect(() => {
     setSwitched(initialSwitched);
-  },[initialSwitched]);
+  }, [initialSwitched]);
 
   return (
     <ShadcnSwitch.Root
@@ -30,7 +30,7 @@ const Switch = ({ initialSwitched, disabled, onSwitch }: SwitchProps) => {
         {
           'disabled:bg-button-secondary-pressed disabled:border-checkbox':
             disabled && !switched,
-            'disabled:bg-checkbox disabled:border-checkbox': disabled && switched,
+          'disabled:bg-checkbox disabled:border-checkbox': disabled && switched,
         }
       )}
     >
