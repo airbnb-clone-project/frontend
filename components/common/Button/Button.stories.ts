@@ -17,7 +17,13 @@ const meta = {
     disabled: { control: 'boolean' },
     color: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'tertiary', 'secondary-white', 'selected'],
+      options: [
+        'primary',
+        'secondary',
+        'tertiary',
+        'secondary-white',
+        'selected',
+      ],
     },
     border: { control: 'boolean' },
     transition: { control: 'boolean' },
@@ -72,7 +78,6 @@ export const SecondaryWithIcon: Story = {
     trailingIcon: true,
   },
 };
-
 
 export const Selected: Story = {
   args: {

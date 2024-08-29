@@ -11,7 +11,6 @@ import Plus from '@/public/svgs/plus.svg';
 import Pen from '@/public/svgs/pen.svg';
 import Danger from '@/public/svgs/danger.svg';
 
-
 const Home = () => {
   return (
     <div>
@@ -30,7 +29,11 @@ const Home = () => {
           </Popover>
         </div>
         <div>
-          <Icon icon="template" accessibilityLabel="Add item" color="disabled" />
+          <Icon
+            icon="template"
+            accessibilityLabel="Add item"
+            color="disabled"
+          />
           asdfafds
           <Plus width="100" height="100" />
           <Pen width="100" height="100" />
