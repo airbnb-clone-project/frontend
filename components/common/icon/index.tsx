@@ -26,8 +26,6 @@ interface IconProps {
   color?: IconColor;
 }
 
-
-
 const Icon: FC<IconProps> = ({ icon, accessibilityLabel, size = 24, color = 'default' }) => {
   const SvgIcon = icons[icon];
 

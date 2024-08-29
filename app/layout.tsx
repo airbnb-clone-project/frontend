@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 
-import "./globals.css";
+import './globals.css';
 
-import Providers from "./providers";
+import Providers from './providers';
 
 const pretendard = localFont({
-  src: "../public/font/PretendardVariable.woff2",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-pretendard",
+  src: '../public/font/PretendardVariable.woff2',
+  display: 'swap',
+  weight: '45 920',
+  variable: '--font-pretendard',
 });
 
 export const metadata: Metadata = {
-  title: "Pinterest clone",
-  description: "Pinterest clone with Next.js",
+  title: 'Pinterest clone',
+  description: 'Pinterest clone with Next.js',
 };
 
 export default function RootLayout({
