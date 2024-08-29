@@ -27,9 +27,7 @@ interface IconProps {
 }
 
 const Icon: FC<IconProps> = ({ icon, accessibilityLabel, size = 24, color = 'default' }) => {
-  console.log('icon => ', icon);
   const SvgIcon = icons[icon];
-  console.log('SvgIcon => ', SvgIcon);
 
   if (!SvgIcon) {
     return null;
@@ -40,7 +38,8 @@ const Icon: FC<IconProps> = ({ icon, accessibilityLabel, size = 24, color = 'def
       aria-label={accessibilityLabel}
       width={size}
       height={size}
-      fill={colorMap[color]}  // 색상을 colorMap에서 가져옵니다.
+      fill={colorMap[color]}
+      viewBox={`0 0 24 24`}
     />
   );
 };
