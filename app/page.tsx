@@ -12,6 +12,7 @@ import Pen from '@/public/svgs/pen.svg';
 import Danger from '@/public/svgs/danger.svg';
 import AppIconBtn from '@/components/common/AppIconBtn';
 import AppAvatar from '@/components/common/AppAvatar';
+import InputDropdown from '@/components/common/InputDropdown/InputDropdown';
 
 const Home = () => {
   return (
@@ -51,6 +52,9 @@ const Home = () => {
           <AppAvatar src="/vercel.svg" alt="d" />
           <AppAvatar src="/vercel.svg" alt="d" size="lg" />
           <AppAvatar size="sm" hoverEffect={true} />
+        </div>
+        <div>
+          <InputDropdown />
         </div>
       </section>
     </div>
