@@ -10,6 +10,9 @@ import { cn } from '@/lib/utils';
 import Plus from '@/public/svgs/plus.svg';
 import Pen from '@/public/svgs/pen.svg';
 import Danger from '@/public/svgs/danger.svg';
+import AppIconBtn from '@/components/common/AppIconBtn';
+import AppAvatar from '@/components/common/AppAvatar';
+import InputDropdown from '@/components/common/InputDropdown/InputDropdown';
 
 const Home = () => {
   return (
@@ -38,6 +41,20 @@ const Home = () => {
           <Plus width="100" height="100" />
           <Pen width="100" height="100" />
           <Danger width="100" height="100" />잘 적용됩니다
+        </div>
+
+        <div>
+          <AppIconBtn />
+          <AppIconBtn textColor="primary" size="md" />
+          <AppIconBtn textColor="primary" size="sm" />
+        </div>
+        <div>
+          <AppAvatar src="/vercel.svg" alt="d" />
+          <AppAvatar src="/vercel.svg" alt="d" size="lg" />
+          <AppAvatar size="sm" hoverEffect={true} />
+        </div>
+        <div>
+          <InputDropdown />
         </div>
       </section>
     </div>
