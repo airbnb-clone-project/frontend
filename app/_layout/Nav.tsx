@@ -2,14 +2,19 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
 import Button from '@/components/common/Button/Button';
 import NavSearchForm from '../_components/NavSearchForm';
+
 import BellIcon from '@/public/svgs/bell.svg';
 import MessageIcon from '@/public/svgs/messenger.svg';
+import ArrowDownIcon from '@/public/svgs/arrow_down.svg';
 
 const LoggedInNavBar = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="p-4 text-[#111] font-medium flex justify-between items-center">
       <div className="flex items-center">
@@ -27,9 +32,12 @@ const LoggedInNavBar = () => {
         </Link>
         <Link href="/">
           <Button
-            color="secondary-white"
-            className={cn('text-white bg-[#111] h-12')}
             size="md"
+            color="tertiary"
+            aria-label="홈으로 이동"
+            className={cn(
+              `${pathname === '/' ? 'bg-[#111] hover:bg-[#111] text-white' : 'bg-white text-[#111]'}`
+            )}
           >
             홈
           </Button>
@@ -37,9 +45,11 @@ const LoggedInNavBar = () => {
         <Link href="/pin-creation-tool">
           <Button
             size="md"
-            color="secondary-white"
-            // className={cn('text-[#111] h-12 bg-red-300')}
+            color="tertiary"
             aria-label="핀 만들기로 이동"
+            className={cn(
+              `${pathname === '/pin-creation-tool' ? 'bg-[#111] hover:bg-[#111] text-white' : 'bg-white text-[#111]'}`
+            )}
           >
             만들기
           </Button>
@@ -51,31 +61,52 @@ const LoggedInNavBar = () => {
       <div className="flex items-center">
         <ul className="flex mr-6">
           <li>
-            {/* <Button size="md">
-              <BellIcon className="w-5 h-6" />
-            </Button> */}
+            <Button
+              size="md"
+              color="secondary-white"
+              className={cn('p-3 hover:bg-[#F1F1F1]')}
+            >
+              <BellIcon className="w-6 h-6" />
+            </Button>
           </li>
           <li>
-            {/* <Button size="md">
+            <Button
+              size="md"
+              color="secondary-white"
+              className={cn('p-3 hover:bg-[#F1F1F1]')}
+            >
               <MessageIcon className="w-6 h-6" />
-            </Button> */}
+            </Button>
           </li>
           <li>
-            {/* <Button>
-              <figure>
-                <Image
-                  src="/icon.ico"
-                  alt="사용자 이미지"
-                  width={24}
-                  height={24}
-                ></Image>
-              </figure>
-            </Button> */}
+            <Link
+              href={'/'} //user.id로 교체해야합니디.
+              aria-label="홈으로 이동"
+            >
+              <Button
+                size="sm"
+                color="secondary-white"
+                className={cn('p-3 hover:bg-[#F1F1F1]')}
+              >
+                <figure>
+                  <Image
+                    src="/icon.ico"
+                    alt="사용자 이미지"
+                    width={24}
+                    height={24}
+                  ></Image>
+                </figure>
+              </Button>
+            </Link>
           </li>
           <li className="flex items-center">
-            <Button className={cn('w-6 h-6')}>
+            <Button
+              size="md"
+              color="secondary-white"
+              className={cn('p-3 hover:bg-[#F1F1F1]')}
+            >
               <div className="flex justify-center items-center">
-                {/* <FaAngleDown className="w-5 h-5" /> */}
+                <ArrowDownIcon className="w-3 h-3" />
               </div>
             </Button>
           </li>
