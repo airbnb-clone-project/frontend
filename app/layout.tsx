@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 import Providers from './providers';
+import Nav from './_components/Nav';
 
 const pretendard = localFont({
   src: '../public/font/PretendardVariable.woff2',
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendard.className}>
+        <Nav />
         <Providers>{children}</Providers>
       </body>
     </html>
