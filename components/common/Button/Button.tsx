@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import ArrowDownIcon from '@/public/svgs/arrow_down.svg';
 
 interface ButtonProps {
-  children: string;
+  children: React.ReactNode;
   size: 'sm' | 'md' | 'lg';
   trailingIcon?: boolean;
   disabled?: boolean;
