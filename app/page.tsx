@@ -3,6 +3,7 @@
 import { useModalStore } from '@/utils/useModalStore';
 
 import LoginModal from './_components/modal/LoginModal';
+import PinBoard from './_components/PinBoard';
 
 const Home = () => {
   const isModalOpen = useModalStore((state) => state.isModalOpen);
@@ -16,6 +17,7 @@ const Home = () => {
       </div>
       <main>
         <h1 className="text-red-400">Home</h1>
+        <PinBoard />
       </main>
     </div>
   );
