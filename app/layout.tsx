@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 
 import './globals.css';
+import localFont from 'next/font/local';
 
 import Providers from './providers';
-import Nav from './_layout/Nav';
+import NavBar from './_layout/Navbar';
 
 const pretendard = localFont({
   src: '../public/font/PretendardVariable.woff2',
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendard.className}>
-        <Nav />
+        <NavBar />
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -1,9 +1,19 @@
+'use client';
+
+import { useModalStore } from '@/utils/useModalStore';
+
 import LoginModal from './_components/modal/LoginModal';
 
 const Home = () => {
+  const isModalOpen = useModalStore((state) => state.isModalOpen);
+
   return (
     <div>
-      <LoginModal />
+      <div
+        className={`${isModalOpen ? 'fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50' : ''}`}
+      >
+        <LoginModal />
+      </div>
       <main>
         <h1 className="text-red-400">Home</h1>
       </main>
