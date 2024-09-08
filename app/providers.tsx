@@ -1,5 +1,6 @@
 'use client';
 
+import { MswProvider } from '@/components/MswProvider';
 import {
   QueryClient,
   QueryClientProvider,
@@ -23,6 +24,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <HydrationBoundary state={dehydrate(queryClient)}>
+        <MswProvider />
         {children}
       </HydrationBoundary>
     </QueryClientProvider>
