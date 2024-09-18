@@ -7,7 +7,13 @@ interface ButtonProps {
   size: 'sm' | 'md' | 'lg';
   trailingIcon?: boolean;
   disabled?: boolean;
-  color?: 'primary' | 'secondary' | 'tertiary' | 'secondary-white' | 'selected';
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'secondary-white'
+    | 'selected'
+    | 'none';
   border?: boolean;
   className?: string;
   transition?: boolean;
@@ -49,6 +55,8 @@ const Button = ({
             color === 'secondary-white',
           'bg-button-text-gray text-white hover:bg-button-text-gray':
             color === 'selected',
+          'bg-transparent bg-opacity-30 text-white hover:bg-black hover:bg-opacity-15':
+            color === 'none',
         },
         {
           'border border-button-secondary-pressed box-border': border,
